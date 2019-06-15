@@ -1,33 +1,65 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.padder {
+  padding: 3px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#game {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  flex-direction: column;
+}
+#board {
+  display: flex;
+  width: 300px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.square:nth-child(3n) {
+  border-right: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.square:nth-child(3n + 1) {
+  border-left: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.square:nth-child(1),
+.square:nth-child(2),
+.square:nth-child(3) {
+  border-top: 0;
+}
+.square:nth-child(7),
+.square:nth-child(8),
+.square:nth-child(9) {
+  border-bottom: 0;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+
+  border: 1px solid black;
+  align-items: center;
+}
+
+#head {
+  font-size: 25px;
+  padding: 10px;
+  margin-left: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#buttonStyle {
+  margin-left: 525px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
